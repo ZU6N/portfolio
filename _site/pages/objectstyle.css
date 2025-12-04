@@ -126,3 +126,100 @@ header h1 {
     font-size: 2rem;
   }
 }
+
+/* --- CODE BUTTON --- */
+.code-btn {
+    padding: 10px 18px;
+    background: #4a4aff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+
+.code-btn:hover {
+    background: #3737ff;
+    transform: scale(1.05);
+}
+
+.gatekeep-btn {
+    padding: 10px 18px;
+    background: #4e4ea1;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+
+.gatekeep-btn:hover {
+    background: #5151c9;
+    transform: scale(1.05);
+}
+
+/* --- POPUP OVERLAY --- */
+#popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(3px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* --- POPUP BOX --- */
+#popup-box {
+    background: #1e1e1e;
+    padding: 20px;
+    width: 60%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    position: relative;
+    animation: popupFade 0.25s ease;
+}
+
+/* fade animation */
+@keyframes popupFade {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* X CLOSE BUTTON */
+#popup-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* CODE FORMATTING */
+#popup-content {
+    white-space: pre-wrap;
+    color: #dcdcdc;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+/* Hide the source code block */
+.hidden-code {
+    display: none;
+}
+
+#popup-content {
+    padding: 10px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
